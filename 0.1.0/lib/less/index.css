@@ -1,0 +1,86 @@
+.face-message-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1350;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+.face-message {
+  pointer-events: auto;
+  opacity: 0;
+  text-align: left;
+  box-shadow: 0px 0.05em 0.3em rgba(11, 11, 11, 0.2);
+  display: inline-block;
+  padding: .5em 1em;
+  border-radius: .3em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  color: #444444;
+  font-size: 0.8em;
+  background-color: white;
+}
+.face-message--fadein {
+  opacity: 1;
+  transition: opacity .5s;
+}
+.face-message--fadeout {
+  opacity: 0;
+  transition: opacity .5s;
+}
+.face-message-icon {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 1.3em;
+  margin-bottom: -0.1em;
+  margin-left: .2em;
+  margin-right: .5em;
+  color: #4387fd;
+}
+.face-message-content {
+  vertical-align: middle;
+  display: inline-block;
+}
+.face-message-remove {
+  line-height: 1.58;
+  vertical-align: top;
+  display: inline-block;
+  font-weight: 300;
+  padding-left: .5em;
+  padding-right: .5em;
+  opacity: .6;
+  color: #333;
+  cursor: pointer;
+  margin-right: .4em;
+}
+.face-message-remove:hover {
+  opacity: 1;
+  color: #d85c4b;
+}
+.face-message--remove {
+  padding-right: 0;
+}
+@keyframes faceMessageLoadinganimatedBackground {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+.face-message-icon-loading {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-top: -0.1em;
+}
+.face-message--themes-success .face-message-icon {
+  color: #5dc75d;
+}
+.face-message--themes-error .face-message-icon {
+  color: #d85c4b;
+}
+.face-message--themes-warn .face-message-icon {
+  color: #f2ad54;
+}
