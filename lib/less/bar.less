@@ -1,0 +1,23 @@
+@import "./settings";
+.@{face-message-prefix}-loading-bar {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 0;
+    height: .1em;
+    background-color: #318CF2;
+    box-shadow: 0px 0px .1em #ccc;
+    transition: opacity .5s, background-color .5s;
+    z-index: 99999;
+}
+
+.@{face-message-prefix}-loading-bar--fadeout {
+    opacity: 0;
+}
+.@{face-message-prefix}-loading-bar--done {
+    background-color:#5dc75d;
+}
+
+.@{face-message-prefix}-loading-bar--fail {
+    background-color:#f96371;
+}

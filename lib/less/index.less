@@ -1,0 +1,102 @@
+@import "./settings";
+.@{face-message-prefix}-wrap {
+    position: fixed;
+    top:0;left:0;
+    z-index: @face-message-zindex;
+    width: 100%;
+    text-align: center;
+    pointer-events:none;
+}
+.@{face-message-prefix}-item {
+
+}
+.@{face-message-prefix} {
+    pointer-events:auto;
+    opacity: 0;
+    text-align: left;
+    box-shadow: @face-message-box-shadow;
+    display: inline-block;
+    padding:.5em 1em;
+    border-radius: .3em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    color:@face-message-text-color;
+    font-size:@face-message-font-size;
+    background-color:white;
+}
+.@{face-message-prefix}--fadein {
+    opacity: 1;
+    transition: opacity .5s;
+}
+.@{face-message-prefix}--fadeout {
+    opacity: 0;
+    transition: opacity .5s;
+}
+.@{face-message-prefix}-icon {
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 1.3em;
+    margin-bottom: @face-message-icon-offset;
+    margin-left: .2em;
+    margin-right: .5em;
+    color: @face-message--primary-color;
+}
+.@{face-message-prefix}-content {
+    vertical-align: middle;
+    display: inline-block;
+}
+.@{face-message-prefix}-remove {
+    line-height: 1.58;
+    vertical-align: top;
+    display: inline-block;
+    font-weight: 300;
+    padding-left: .5em;
+    padding-right: .5em;
+    opacity: .6;
+    color: #333;
+    cursor: pointer;
+    margin-right: .4em;
+    &:hover {
+        opacity: 1;
+        color:@face-message--danger-color;
+    }
+}
+.@{face-message-prefix}--remove {
+    padding-right: 0;
+}
+@keyframes faceMessageLoadinganimatedBackground {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}
+.@{face-message-prefix}--themes-loading {
+  // border:1px solid #eee;
+  // animation: faceMessageLoadinganimatedBackground 5s linear infinite;
+  // background-image: linear-gradient(90deg, lighten(@face-message--loading-color, 2%) 50%, darken(@face-message--loading-color, 3%) 50%);
+  // background-size: .6em;
+  // box-shadow:none;
+  .@{face-message-prefix}-icon {
+
+  }
+}
+.@{face-message-prefix}-icon-loading {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    margin-top: @face-message-icon-offset;
+}
+.@{face-message-prefix}--themes-success {
+    .@{face-message-prefix}-icon {
+        color: @face-message--success-color;
+    }
+}
+.@{face-message-prefix}--themes-error {
+    .@{face-message-prefix}-icon {
+        color: @face-message--danger-color;
+    }
+}
+
+.@{face-message-prefix}--themes-warn {
+    .@{face-message-prefix}-icon {
+        color: @face-message--warning-color;
+    }
+}
